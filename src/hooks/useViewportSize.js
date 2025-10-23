@@ -11,7 +11,6 @@ export const useViewportSize = () =>{
         setHeight(window.outerHeight);
         setWidth(window.outerWidth);
         count.current++;
-        console.log("Rerender");
     },[throttledValueResize])
     useEffect(()=>{
         window.addEventListener("resize", ()=>{setResize(prev => !prev)})
